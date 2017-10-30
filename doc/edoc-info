@@ -1,0 +1,5 @@
+%% encoding: UTF-8
+{application,fridge_manager}.
+{modules,[fridge_manager_app,fridge_manager_listener,fridge_manager_sup,
+          fridge_manager_utils,listener_handler,manager_server,
+          manager_server_test]}.
