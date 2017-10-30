@@ -1,6 +1,8 @@
 -module(manager_server_test).
 -include_lib("eunit/include/eunit.hrl").
--compile(export_all).
+-export([functionality_test_/0, start/0, stop/1, add_product/0,
+         check_avalibility/0, withdraw_product/0, try_witdrawing_nonexisting/0,
+         try_witdrawing_more/0]).
 
 -define(SERVER, manager_server).
 
