@@ -1,7 +1,15 @@
+%%%%---------------------------------------------------------------------------
+%%%% @author Artur Jopek
+%%%%---------------------------------------------------------------------------
+%%%% @doc
+%%%% This module implements cowboy callbacks for REST endpoint.
+%%%% @end
+%%%%---------------------------------------------------------------------------
 -module(listener_handler).
 
+% Initialize callback
 -export([init/2]).
-%% Rest callbacks
+%% REST callbacks
 -export([content_types_provided/2, allowed_methods/2, to_text/2,
 				 content_types_accepted/2, handle_text_content/2]).
 
@@ -48,7 +56,7 @@ handle_text_content(Req, State) ->
 	{true , Req1, State}.
 
 %% @doc
-%%	Content types provided for GET request.
+%% Content types provided for GET request.
 %% @end
 -spec content_types_provided(req(), state()) ->
 	{[{binary(), atom()}], req(), state()}.

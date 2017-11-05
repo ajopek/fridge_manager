@@ -1,3 +1,12 @@
+%%%%---------------------------------------------------------------------------
+%%%% @author Artur Jopek
+%%%%---------------------------------------------------------------------------
+%%%% @doc
+%%%% This module provides ulity functions for REST endpoint, built upon
+%%%% manager_server api. 
+%%%% @end
+%%%%---------------------------------------------------------------------------
+
 -module(fridge_manager_utils).
 -export([check_recipe/2, execute_recipe/1, withdraw_recipe/1, insert/2, withdraw/2]).
 -import(manager_server,

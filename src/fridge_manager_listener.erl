@@ -1,3 +1,10 @@
+%%%%---------------------------------------------------------------------------
+%%%% @author Artur Jopek
+%%%%---------------------------------------------------------------------------
+%%%% @doc
+%%%% This module manages cowboy TCP listener. 
+%%%% @end
+%%%%---------------------------------------------------------------------------
 -module(fridge_manager_listener).
 -export([start/0, stop/1]).
 
@@ -14,6 +21,7 @@ start() ->
 	]),
 	{ok, _} = cowboy:start_clear(?MODULE, [{port, 8080}],
 										 #{env => #{dispatch => Dispatch}}).
-
+-spec stop(term()) ->
+	ok.
 stop(_State) ->
 	ok.
